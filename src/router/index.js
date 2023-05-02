@@ -1,0 +1,44 @@
+import { createRouter, createWebHashHistory } from "vue-router";
+
+const routes = [
+  {
+    path: "/login",
+    name: "login",
+    component: () =>
+      import(/* webpackChunkName: "login" */ "../views/login/IndexView.vue"),
+  },
+  {
+    path: "/",
+    name: "系统",
+    component: () =>
+      import("../views/layout/IndexView.vue"),
+    redirect:"/home",
+    children:[
+      {
+        path: "/home",
+        name: "首页",
+        component: () =>
+          import("../views/layout/IndexView.vue"),
+      },
+      {
+        path: "/typeone",
+        name: "一类设备",
+        component: () =>
+          import("../views/typeone/IndexView.vue"),
+      },
+      {
+        path: "/typetwo",
+        name: "二类设备",
+        component: () =>
+          import("../views/typetwo/IndexView.vue"),
+      }
+    ]
+  },
+];
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  routes,
+});
+
+export default router;
