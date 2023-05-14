@@ -5,7 +5,7 @@
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>退出登录</el-dropdown-item>
+            <el-dropdown-item @click="logout">退出登录</el-dropdown-item>
           </el-dropdown-menu>
         </template>
     </el-dropdown>
@@ -13,9 +13,14 @@
 
 <script setup>
 import { ref } from 'vue'
-
+import router from '@/router'
 // const circleUrl=ref("http://8.130.107.241/LightPicture/2022/10/76135c0034eac7b0.png");
 const circleUrl=ref("http://tututeam.top/LightPicture/2022/10/76135c0034eac7b0.png");
+
+const logout=()=>{
+    window.sessionStorage.removeItem("token");
+    router.replace('/login');
+}
 </script>
 
 <style lang="scss" scoped></style>

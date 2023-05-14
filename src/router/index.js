@@ -18,7 +18,7 @@ const routes = [
         path: "/home",
         name: "首页",
         component: () =>
-          import("../views/layout/IndexView.vue"),
+          import("../views/home/IndexView.vue"),
       },
       {
         path: "/typeone",
@@ -31,6 +31,12 @@ const routes = [
         name: "二类设备",
         component: () =>
           import("../views/typetwo/IndexView.vue"),
+      },
+      {
+        path: "/changepw",
+        name: "修改密码",
+        component: () =>
+          import("../views/changepw/IndexView.vue"),
       }
     ]
   },

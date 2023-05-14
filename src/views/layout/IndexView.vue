@@ -11,7 +11,9 @@
               </div>
           </div>
         </el-header>
-        <el-main>Main</el-main>
+        <el-main>
+          <RouterView></RouterView>
+        </el-main>
         <el-footer>
           <Footer></Footer>
         </el-footer>
@@ -53,6 +55,10 @@ import Footer from '/src/views/layout/footer/IndexView.vue'
   padding: 0px;
 }
 
+:deep(.el-main){
+  padding: 0px;
+}
+
 .common-layout {
   position: relative;
   width: 100%;
@@ -71,35 +77,4 @@ import Footer from '/src/views/layout/footer/IndexView.vue'
 :deep(ul.el-menu){
   border-right-width: 0px;
 }
-// .navbar {
-//   width: 100%;
-//   height: 60px;
-//   overflow: hidden;
-//   background-color: #fff;
-//   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-//   padding: 0 16px;
-//   display: flex;
-//   align-items: center;
-//   box-sizing: border-box;
-//   position: relative;
-
-//   .navbar-right {
-//     flex: 1;
-//     display: flex;
-//     align-items: center;
-//     justify-content: flex-end;
-//   }
-// }
-
-// :deep(.el-header) {
-//   padding: 0px;
-// }
-
-// ::v-deep .el-container {
-//   height: 100%;
-// }
-
-// ::v-deep ul.el-menu {
-//   border-right-width: 0px
-// }
 </style>

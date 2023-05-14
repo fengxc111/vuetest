@@ -1,7 +1,8 @@
 <template>
     <div class="footer">
-        信息采集管理系统
         {{ time }}
+        欢迎
+        {{ username }}
     </div>
 </template>
 
@@ -10,6 +11,9 @@ let year = new Date().getFullYear();
 let month = new Date().getMonth() +1;
 let day = new Date().getDate();
 let time = year + '--' + month + '--' + day;
+
+let username=window.sessionStorage.getItem("username");
+
 </script>
 
 <style lang="scss" scoped>

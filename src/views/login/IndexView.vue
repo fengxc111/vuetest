@@ -4,21 +4,13 @@
       <div class="title-container">
         <h1 class="title">后台管理系统</h1>
       </div>
-      <el-form-item prop="username">
-        <!-- <el-icon :size="20" class="svg-container">
-          <edit />
-        </el-icon> -->
+      <el-form-item prop="userName">
         <el-icon size="25" class="icon-container">
           <User />
         </el-icon>
-        <!-- <svg-icon icon="user" class="svg-container"></svg-icon> -->
-        <el-input v-model="form.username" placeholder="请输入用户名" />
+        <el-input v-model="form.userName" placeholder="请输入用户名" />
       </el-form-item>
       <el-form-item prop="password">
-        <!-- <el-icon :size="20" class="svg-container">
-          <edit />
-        </el-icon> -->
-        <!-- <svg-icon icon="password" class="svg-container"></svg-icon> -->
         <el-icon size="25" class="icon-container">
           <Lock />
         </el-icon>
@@ -34,17 +26,16 @@
 <script setup>
 import { ref } from "vue";
 import { Edit,User,Lock } from "@element-plus/icons-vue";
-// import axios from 'axios'
 import axiosUtil from "/src/utils/axios"
 import { ElMessage } from "element-plus";
 import router from "/src/router/index.js"
 const form = ref({
-  username: "",
+  userName: "",
   password: "",
 });
 
 const rules=ref({
-  username: [
+  userName: [
     { required: true, message: '请输入用户名', trigger: 'blur' },
   ],
   password: [
@@ -60,8 +51,8 @@ const handleLogin=()=>{
       try {
         let result = await axiosUtil.post("login", form.value);
         if (result.data === "登录成功") {
-          // ElMessage.success("登录成功");
           window.sessionStorage.setItem("token", result.data);
+          window.sessionStorage.setItem("userName", form.value.userName)
           router.replace("/");
         } else {
           ElMessage.error(result.data);
@@ -70,15 +61,6 @@ const handleLogin=()=>{
         console.log("error" + err);
         ElMessage.error("请联系管理员");
       }
-      // axios.post("http://localhost:8081/login", form.value)
-      //   .then(response=>{
-      //     console.log("返回成功")
-      //     console.log(response.data)
-      //   }).catch(error=>{
-      //     ElMessage.error("系统运行出错，请联系管理员！")
-      //   })
-      // console.log(response.data)
-      // // console.log("验证成功");
     }else{
       console.log("验证失败");
     }
