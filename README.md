@@ -1,4 +1,7 @@
 # 工业设备实时信息采集管理程序
+--网页前端  
+毕设项目，后端见industry_back  
+
 ## Project setup
 ```
 npm install
