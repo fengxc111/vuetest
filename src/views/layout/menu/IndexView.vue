@@ -11,10 +11,10 @@
                 <template #title>
                     <!-- <el-icon><location /></el-icon> -->
                     <el-icon><Histogram /></el-icon>
-                    <span>设备信息查看</span>
+                    <span>信息查看</span>
                 </template>
-                <el-menu-item index="typeone">一类设备</el-menu-item>
-                <el-menu-item index="typetwo">二类设备</el-menu-item>
+                <el-menu-item index="typeone">设备信息</el-menu-item>
+                <el-menu-item index="typetwo">维修人员信息</el-menu-item>
             </el-sub-menu>
             <el-sub-menu index="settings">
                 <template #title>

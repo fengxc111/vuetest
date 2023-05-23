@@ -14,7 +14,7 @@ const httpService = axios.create({
 // 添加请求拦截器
 httpService.interceptors.request.use(function (config) {
   // 在发送请求之前做些什么
-  config.headers.token=window.sessionStorage.getItem('token');
+  // config.headers.token=window.sessionStorage.getItem('token');
   return config;
 }, function (error) {
   // 对请求错误做些什么
@@ -63,7 +63,7 @@ export function post(url, params = {}) {
       method: 'post',
       data: params
     }).then(response => {
-      // console.log(response)
+      console.log(response)
       resolve(response);
     }).catch(error => {
       console.log(error)
