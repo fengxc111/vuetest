@@ -5,7 +5,9 @@ import axios from 'axios';
 const httpService = axios.create({
   // url前缀-'http:xxx.xxx'
   // baseURL: process.env.BASE_API, // 需自定义
-  baseURL:'http://localhost:8081/',
+  // baseURL:'http://localhost:8081/',
+  // baseURL:'http://tututeam.top:1234/',
+  baseURL:'http://localhost:1234/',
   // 请求超时时间
   timeout: 3000 // 需自定义
 });

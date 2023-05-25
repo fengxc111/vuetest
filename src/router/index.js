@@ -22,13 +22,13 @@ const routes = [
       },
       {
         path: "/typeone",
-        name: "一类设备",
+        name: "设备信息",
         component: () =>
           import("../views/typeone/IndexView.vue"),
       },
       {
         path: "/typetwo",
-        name: "二类设备",
+        name: "维修人员信息",
         component: () =>
           import("../views/typetwo/IndexView.vue"),
       },

@@ -15,7 +15,7 @@
 import { ref } from 'vue'
 import router from '@/router'
 // const circleUrl=ref("http://8.130.107.241/LightPicture/2022/10/76135c0034eac7b0.png");
-const circleUrl=ref("http://tututeam.top/LightPicture/2022/10/76135c0034eac7b0.png");
+const circleUrl=ref("http://tututeam.top:1000/LightPicture/2022/10/76135c0034eac7b0.png");
 
 const logout=()=>{
     window.sessionStorage.removeItem("token");

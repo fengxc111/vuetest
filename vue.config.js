@@ -6,6 +6,9 @@ function resolve(dir){
 }
 
 module.exports = defineConfig({
+  assetsDir: 'static',
+  parallel: false,
+  publicPath: './',
   transpileDependencies: true,
   lintOnSave: false,
 

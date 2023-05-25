@@ -8,7 +8,7 @@
         </el-row>
         <el-table :data="tableData" style="width: 100%" :row-class-name="tableRowClassName" >
             <el-table-column prop="deviceId" label="设备ID" width="200" />
-            <el-table-column prop="deviceName" label="设备名称" width="200"/>
+            <el-table-column prop="deviceName" label="设备名称" width="250"/>
             <el-table-column prop="location" label="部署地址" width="200" />
             <el-table-column prop="departmentName" label="所属部门" width="200" />
             <el-table-column prop="status" label="状态" width="200" />
