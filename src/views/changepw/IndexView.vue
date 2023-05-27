@@ -50,7 +50,7 @@ const rules=ref({
 const formRef=ref(null);
 
 const initFormData=()=>{
-    let username=window.sessionStorage.getItem("username");
+    let username=window.sessionStorage.getItem("userName");
     form.value.username=username;
 }
 initFormData();
