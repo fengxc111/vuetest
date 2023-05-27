@@ -92,7 +92,7 @@ const handleStatus=(id, status)=>{
     }else{
         statusForm.value.query="正常";
     }
-    console.log(id);
+    // console.log(id);
 
     ElMessageBox.confirm(
     '您确定要修改设备状态吗?',

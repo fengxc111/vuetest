@@ -63,7 +63,7 @@ const onSubmit=()=>{
             }else{
                 try{
                     let result = await axiosUtil.post("changepw", form.value);
-                    console.log(result);
+                    // console.log(result);
                     if(result.status==200){
                         if(result.data==="修改成功"){
                             ElMessage.success("密码修改成功");
