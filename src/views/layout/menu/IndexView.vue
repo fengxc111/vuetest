@@ -40,7 +40,9 @@ import {
 
 
 const logout=()=>{
-    window.sessionStorage.removeItem("token");
+    // window.sessionStorage.removeItem("token");
+    // window.sessionStorage.removeItem("userName");
+    window.sessionStorage.clear();
     router.replace('/login');
 }
 </script>
