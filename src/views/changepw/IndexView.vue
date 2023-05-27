@@ -28,7 +28,7 @@ import axiosUtil from '/src/utils/axios.js'
 import { ElMessage } from "element-plus";
 
 const form=ref({
-    username:"",
+    userName:"",
     password:"",
     newpw:"",
     confirmpw:""
