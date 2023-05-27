@@ -1,8 +1,8 @@
 <template>
     <el-card>
         <el-form ref="formRef" :model="form" :rules="rules" label-width="150px" >
-            <el-form-item label="用户名" prop="username">
-                <el-input v-model="form.username" disabled/>
+            <el-form-item label="用户名" prop="userName">
+                <el-input v-model="form.userName" disabled/>
             </el-form-item>
             <el-form-item label="旧密码" prop="password">
                 <el-input v-model="form.password" type="password"/>
@@ -34,7 +34,7 @@ const form=ref({
     confirmpw:""
 });
 const rules=ref({
-    username: [
+    userName: [
         { required: true, message: '请输入用户名'},
     ],
     password: [
@@ -50,8 +50,8 @@ const rules=ref({
 const formRef=ref(null);
 
 const initFormData=()=>{
-    let username=window.sessionStorage.getItem("userName");
-    form.value.username=username;
+    let userName=window.sessionStorage.getItem("userName");
+    form.value.userName=userName;
 }
 initFormData();
 
