@@ -2,7 +2,7 @@
   <div class="login-container">
     <el-form :model="form" :rules="rules" ref="formRef" class="login-form">
       <div class="title-container">
-        <h1 class="title">后台管理系统</h1>
+        <h1 class="title">工业设备实时信息采集管理系统</h1>
       </div>
       <el-form-item prop="userName">
         <el-icon size="25" class="icon-container">
@@ -19,6 +19,10 @@
       <el-form-item>
         <el-button type="primary" class="login-button" @click="handleLogin">登录</el-button>
       </el-form-item>
+      <div class="footer-auth">
+        21190819冯信诚
+        毕业设计
+      </div>
     </el-form>
   </div>
 </template>
@@ -71,6 +75,7 @@ const handleLogin=()=>{
 
 <style lang="scss" scoped>
 $bg: #2d3a4b;
+// $bg: #364760;
 $dark_gray: #889aa4;
 $light_gray: #eee;
 $cursor: #fff;
@@ -107,6 +112,7 @@ $icon: #fff;
       color: #454545;
       background: rgb(36,47,60);
       box-shadow:none;
+      height: 90%;
     }
 
     :deep(.el-input) {
@@ -130,18 +136,13 @@ $icon: #fff;
       width: 100%;
       box-sizing: border-box;
     }
-  }
-
-  .tips {
-    font-size: 16px;
-    line-height: 28px;
-    color: #fff;
-    margin-bottom: 10px;
-
-    span {
-      &:first-of-type {
-        margin-right: 16px;
-      }
+    .footer-auth{
+      position: fixed;
+      bottom: 2%;
+      // right: 45%;
+      left: 47%;
+      color: $light_gray;
+      opacity: 0.2;
     }
   }
 
@@ -176,14 +177,5 @@ $icon: #fff;
     }
   }
 
-  .show-pwd {
-    // position: absolute;
-    // right: 10px;
-    // top: 7px;
-    font-size: 16px;
-    color: $dark_gray;
-    cursor: pointer;
-    user-select: none;
-  }
 }
 </style>
